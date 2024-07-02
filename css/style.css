@@ -1,0 +1,428 @@
+*{
+    margin:0;
+    padding:0;
+}
+/*
+PALETA DE COLORES
+    Negro: #101010    
+    Violeta: #d505dc
+    blanco: #ffffff
+*/
+
+/*
+FUENTES
+.raleway {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.monoton-regular {
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+
+body{
+    font-family: "Raleway", sans-serif;
+    background-color: #101010;
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    min-height: 100vh;
+    .fondo{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position:fixed;
+        left:0;
+        right:0;
+        top:0;
+        bottom:0;
+        z-index: -1;
+    }
+}
+
+/* HEADER*/
+header{
+    text-align: center;
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+}
+
+header img{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 2%;
+    width: 80px;
+    transition: all 0.5s;
+}
+
+header img:hover{
+    transform: rotate3d(1, 1, 1, 45deg);
+    transition: all 0.5s;
+}
+
+.nav-boton{
+    background-color: #ffffff;
+    margin-right: 30px;
+}
+
+.nav-abierto{
+    margin-right: 30px;
+}
+
+nav{
+    margin-top: 40px;
+    width: 100%;
+}
+
+nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul a{
+    background-color: white;
+    text-decoration: none;
+    color: #101010;
+    padding: .25em .5em;
+    border-radius: 15%;
+    transition: all 0.5s;
+    margin: 0em .4em ;
+}
+
+nav ul a:hover{
+    background-color: #d505dc;
+    transition: all 0.5s;
+}
+
+.actual{
+    background-color: #d505dc;
+    color: white;
+}
+
+/*PRINCIPAL*/
+.index-contenedor{
+    margin-top: 14em;
+    margin-bottom: 8.5em;
+}
+
+.index-contenedor h1,h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 3em;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    letter-spacing: 0.29em;
+}
+
+h1 span{
+    color: #d505dc;
+    font-weight: 800;
+}
+
+h2{
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+}
+
+/*FOOTER*/
+footer{
+    margin-top: 10%;
+    margin-bottom: 1.5em;
+    width: 100%;
+    padding: 1%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    bottom: 1.5em;
+}
+
+.contacto{
+    letter-spacing: 1.3em;
+}
+
+footer a img{
+    width: 30px;
+}
+
+/*PÁGINA BIO*/
+#bio h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+#bio section{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.texto-bio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-weight: 100;
+    padding-top: 1em;
+    margin-right: 1.5em;
+}
+
+.a-bio{
+    font-size: 1.5em;
+    display: flex;
+    gap: 1.5em;
+}
+
+.a-bio .cv{
+    font-size: .9em;
+    font-weight: 600;
+    color:#101010;
+    background-color: #ffffff;
+    text-decoration: none;
+    padding: .1em .2em;
+    border-radius: 10%;
+    transition: all 0.3s;
+}
+
+.texto p{
+    text-align: left;
+    font-weight: 100;    
+}
+
+.img-bio{
+    display: flex;
+    align-items: center;
+}
+
+.fotopersonal{
+    width: 20em;
+    height: 14em;
+}
+
+/*PÁGINA SERVICIOS*/
+#servicios{
+    margin-top: 2%;
+}
+
+#servicio_pcipal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#servicio_pcipal .texto p{
+    width: 70%;
+    color: #ffffff;
+    padding: 1%;
+    margin: 0 0 0 15%;
+}
+
+#servicio_pcipal img{
+   width: 60%;
+   aspect-ratio: 16/9;
+   object-fit: cover;
+}
+
+.ambitos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5%;
+}
+
+.ambitos h1{
+    text-align: center;
+    margin: 2% 0 2% 0;
+}
+
+.cartas-ambito{
+    margin-top: 5%;
+}
+.cartas-ambito .carta{
+    background-color: black;
+}
+
+.carta img{
+    text-align: center;
+    width: 50px;
+    margin-left: 5%;
+}
+
+.carta h5{
+    color: #ffffffb9;
+}
+
+.ambitos p{
+    color: #ffffff;
+    font-weight: 100;
+}
+
+/*PÁGINA PORTFOLIO*/
+.portfolio{
+    width: 100%;
+    margin-top: 2%;
+}
+
+.texto h1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+.portfolio-main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.proyecto{
+    margin-left: 10%;
+    max-width: 85%;
+    background-color: #101010;
+    opacity: 0.8;
+}
+
+.tit-proy{
+    color: #ffffff;
+}
+
+.texto-proy{
+    color: #ffffffd3;
+    font-weight: 100;
+}
+
+/*PÁGINA CONTACTO*/
+#contacto{
+    margin-top: 2%;
+}
+
+.texto-formulario h1{
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+#formulario{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#formulario label{
+    font-size: 1.1em;
+    color: #ffffff;
+    margin-right: 1em;
+}
+
+#formulario .comentario{
+    text-align: start;
+}
+
+#formulario textarea{
+    width: 100%;
+}
+
+#formulario input, textarea{
+    font-size: 1.1em;
+}
+
+/*Media Query*/
+@media screen and (max-width: 1200px){
+#bio section{
+    margin-left: 10%;
+    margin-right: 10%;
+    }
+    
+.texto{
+    padding-bottom: 1em;
+    }
+}
+
+#servicios h1{
+    font-size: 2.5em;
+}
+
+.texto-formulario h1{
+    font-size: 1.8em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#formulario{
+    margin-top: 3em;
+}
+
+@media screen and (max-width: 991px) {
+.navbar ul{
+    margin-top: 1em;
+}
+
+#bio h1{
+    display: flex;
+    font-size: 2em;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#bio section{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin-left: 5%;
+    margin-right:5%;
+    }
+
+.a-bio{
+    margin-top: 1em;
+}
+
+.a-bio .cv{
+    font-size: .8em;
+    padding: 0.1em .3em;
+}
+
+.img-bio{
+    margin: 2em 0 0;
+}
+
+.img-bio img{
+    width: 100%;
+    border-radius: 1%;
+}
+
+#servicios h1{
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.ambitos{
+    margin-top: 10%;
+}
+}
