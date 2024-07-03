@@ -7,6 +7,7 @@ PALETA DE COLORES
     Negro: #101010    
     Violeta: #d505dc
     blanco: #ffffff
+    spam: #04DB09
 */
 
 /*
@@ -173,11 +174,17 @@ footer a img{
     justify-content: center;
     margin-top: 2%;
     margin-bottom: 2%;
+    text-shadow: 4px 4px 17px rgba(213,5,220,1);
 }
+
 #bio section{
     display: flex;
     justify-content: center;
     text-align: center;
+    background-color: #101010;
+    box-shadow: 10px 10px 10px -2px rgba(213,5,220,0.28);
+    opacity: 0.8;
+    padding: .7em;
     margin-left: 25%;
     margin-right: 25%;
 }
@@ -188,7 +195,8 @@ footer a img{
     justify-content: center;
     align-items: center;
     color: #ffffff;
-    font-weight: 100;
+    text-align: justify;
+    font-weight: 300;
     padding-top: 1em;
     margin-right: 1.5em;
 }
@@ -210,9 +218,10 @@ footer a img{
     transition: all 0.3s;
 }
 
-.texto p{
-    text-align: left;
-    font-weight: 100;    
+.texto-bio p spam{
+    color:#04DB09;
+    font-style: oblique;
+    font-weight: 400;
 }
 
 .img-bio{
@@ -228,6 +237,11 @@ footer a img{
 /*PÁGINA SERVICIOS*/
 #servicios{
     margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10%;
+    max-width: 80%;
 }
 
 #servicio_pcipal{
@@ -235,13 +249,24 @@ footer a img{
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    background-color: #101010;
+    box-shadow: 10px 10px 10px -2px rgba(213,5,220,0.28);
+    opacity: 0.8;
+    padding: .7em 0 1.5em 0;
+}
+
+#servicio_pcipal h1{
+    text-shadow: 4px 4px 17px rgba(213,5,220,1);
+
 }
 
 #servicio_pcipal .texto p{
-    width: 70%;
+    font-weight: 200;
+    text-align: justify;
+    width: 65%;
     color: #ffffff;
     padding: 1%;
-    margin: 0 0 0 15%;
+    margin: 0 0 2% 17%;
 }
 
 #servicio_pcipal img{
@@ -294,6 +319,8 @@ footer a img{
     display: flex;
     justify-content: center;
     margin-bottom: 3%;
+    text-shadow: 4px 4px 17px rgba(213,5,220,1);
+
 }
 
 .portfolio-main{
@@ -320,15 +347,23 @@ footer a img{
 
 /*PÁGINA CONTACTO*/
 #contacto{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
     margin-top: 2%;
+    margin-left: 20%;
+    background-color: #101010;
+    box-shadow: 10px 10px 10px -2px rgba(213,5,220,0.28);
+    opacity: 0.8;
+    padding: .7em;
 }
 
 .texto-formulario h1{
     font-size: 2em;
     text-align: center;
-    margin-bottom: 1.5em;
-}
+    text-shadow: 4px 4px 17px rgba(213,5,220,1);
 
+}
 #formulario{
     display: flex;
     justify-content: center;
@@ -367,6 +402,14 @@ footer a img{
 
 #servicios h1{
     font-size: 2.5em;
+}
+
+#servicio_pcipal .texto p{
+    font-size: .9em;
+}
+
+.ambitos p{
+    font-size: .9em;
 }
 
 .texto-formulario h1{
