@@ -1,0 +1,85 @@
+/*
+FUENTES
+.raleway {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.monoton-regular {
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+
+h1, h2, h3, h4, h5{
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;    
+    text-align: center;
+}
+
+h1{
+    font-size: 3em;
+    font-weight: 200;
+    font-style: normal;
+    letter-spacing: 0.29em;
+}
+
+h1 span{
+    color: #d505dc;
+    font-weight: 800;
+}
+
+h2{
+    font-size: 2em;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+}
+
+p{
+    color: #ffffff;
+    font: 1.7em;
+    font-weight: 200;
+}
+
+p spam{
+    color:#04DB09;
+    font-style: oblique;
+    font-weight: 400;
+}
+
+/*Media Query*/
+@media screen and (max-width: 1200px){
+    h1{
+        font-size: 2.5em;
+    }
+
+    h2{
+        font-size: 1.8em;
+    }
+
+    p{
+        font-size: .9em;
+    }
+}
+
+@media screen and (max-width: 991px){
+    h1{
+        font-size: 2em;
+    }
+
+    h2{
+        font-size: 1.5em;
+    }
+    p{
+        font-size: .8em;
+    }
+}
