@@ -30,8 +30,8 @@ body{
 
 /**Default Styles**/
 img{
-    display: block;
     max-width:100%;
+    border-radius: 5%;
 }
 
 /**CAJAS**/
@@ -142,8 +142,8 @@ img{
             opacity: 0.8;
             box-shadow: 10px 10px 10px -2px rgba(213,5,220,0.28);
             padding: .7em;
-            margin-left: 25%;
-            margin-right: 25%; 
+            margin-left: 20%;
+            margin-right: 20%; 
         }
 
         .texto-bio{
@@ -173,7 +173,14 @@ img{
         
         .img-bio{
             display: flex;
+            justify-content: center;
             align-items: center;
+            margin-left: 1em;
+        }
+
+        img{
+            aspect-ratio: 1/1;
+            
         }
         
         .fotopersonal{
@@ -332,7 +339,24 @@ img{
 /**Media Query**/
 @media screen and (max-width: 991px){
 .navbar ul{
-    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
 }
- 
+
+#bio section{
+    width: 60%;
+    flex-direction: column;
+
+    img{
+        margin-top: 1em;
+    }
+}
+
+#servicios{
+    #servicio_pcipal{
+        margin-bottom: 3em;
+    }
+}
 }
