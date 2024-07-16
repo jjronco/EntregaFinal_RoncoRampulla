@@ -6,6 +6,9 @@ $color-violeta: #d505dc;
 $color-spam: #04DB09;
 $color-spam2: #5c975d;
 
+/**Transition**/
+$color-transition: linear-gradient(90deg, rgba(0,0,0,0.5) 15%, rgba(213,5,220,0.5) 31%, rgba(132,3,136,0.5) 56%, rgba(0,0,0,0.05) 79%);
+
 /**Sombra**/
 $color-sombra-titulo:  rgba(213,5,220,1);
 $color-sombra-caja: rgba(85, 85, 85, 0.28);
