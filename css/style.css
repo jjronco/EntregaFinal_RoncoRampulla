@@ -432,6 +432,9 @@ img {
   #bio section img {
     margin-top: 1em;
   }
+  #bio section p {
+    text-align: left;
+  }
   #servicios #servicio_pcipal {
     margin-bottom: 3em;
   }
