@@ -10,8 +10,7 @@ html, body{
 }
 
 body{
-    font-family: "Raleway", sans-serif;
-    background-color: #101010;
+    background-color: $color-negro;
     position: relative;
     min-height: 100vh;
     text-rendering: optimizeLegibility;
@@ -54,15 +53,20 @@ img{
             margin-left: 2%;
             width: 80px;
             transition: all 0.5s;
-        }
-        
-        img:hover{
-            transform: rotate3d(1, 1, 1, 45deg);
+
+            &:hover{
+                transform: rotate3d(1, 1, 1, 45deg);
+            }
         }
 
         .nav-boton{
-            background-color: #ffffff;
+            background-color: $color-blanco;
             margin-right: 30px;
+            transition: all .3s;
+
+            &:active{
+                transform: rotate3d(1, 1, 1, 30deg)                
+            }
         }
         
         .nav-abierto{
@@ -72,32 +76,32 @@ img{
         nav{
             margin-top: 40px;
             width: 100%;
-        }
-        
-        nav ul{
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-        }
-        
-        nav ul a{
-            background-color: white;
-            text-decoration: none;
-            color: #101010;
-            padding: .25em .5em;
-            border-radius: 15%;
-            transition: all 0.5s;
-            margin: 0em .4em ;
-        }
-        
-        nav ul a:hover{
-            background-color: #d505dc;
-            transition: all 0.5s;
-        }
-        
-        .actual{
-            background-color: #d505dc;
-            color: white;
+
+            ul{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+
+                a{
+                background-color: $color-blanco;
+                text-decoration: none;
+                color: $color-negro;
+                padding: .25em .5em;
+                border-radius: 15%;
+                transition: all 0.5s;
+                margin: 0em .4em ;
+                
+                &:hover{
+                    background-color: $color-violeta;
+                    transition: all 0.5s ease;
+                }
+                }
+
+                .actual{
+                    background-color: $color-violeta;
+                    color: $color-blanco;
+                }
+            }
         }
     }
 
@@ -127,23 +131,25 @@ img{
 
     #bio{
         h1{
-            display: flex;
-            justify-content: center;
-            margin-top: 2%;
-            margin-bottom: 2%;
-            text-shadow: 4px 4px 17px rgba(213,5,220,1);
+            @include titulos (2%,2%,$sombra-titulo);
         }
 
         section{
             display: flex;
             justify-content: center;
             text-align: center;
-            background-color: #101010;
+            background-color: $color-negro;
             opacity: 0.8;
-            box-shadow: 10px 10px 10px -2px rgba(213,5,220,0.28);
             padding: .7em;
             margin-left: 20%;
-            margin-right: 20%; 
+            margin-right: 20%;
+            margin-bottom: 2em;
+            gap: 1.5em;
+            transition: all 0.5s ease;         
+        }
+
+        .section-bio:hover{
+            box-shadow: $sombra-caja;
         }
 
         .texto-bio{
@@ -164,8 +170,8 @@ img{
         .a-bio .cv{
             font-size: .8em;
             font-weight: 600;
-            color:#101010;
-            background-color: #ffffff;
+            color:$color-negro;
+            background-color: $color-blanco;
             text-decoration: none;
             padding: .1em .2em;
             border-radius: 10%;
@@ -198,8 +204,7 @@ img{
         max-width: 80%;
 
         h1{
-            margin-bottom: 3%;
-            text-shadow: 4px 4px 17px rgba(213,5,220,1);     
+            @include titulos (0,3%,$sombra-titulo);
         }
 
         #servicio_pcipal{
@@ -207,8 +212,8 @@ img{
             flex-direction: column;
             justify-content: center;
             text-align: center;
-            background-color: #101010;
-            box-shadow: 10px 10px 10px -2px rgba(213,5,220,0.28);
+            background-color: $color-negro;
+            box-shadow: $sombra-caja;
             opacity: 0.8;
             padding: .7em 0 1.5em 0;
         }
@@ -235,16 +240,26 @@ img{
             margin: 5%;
         }
         
-        .ambitos h1{
+        .ambitos-tit{
             text-align: center;
             margin: 2% 0 2% 0;
+            color: $color-spam2;
+            background-color: $color-negro;
+            margin-bottom: 2%;
+            opacity: .9;        
         }
         
         .cartas-ambito{
-            margin-top: 5%;
+            margin-top: 2.5%;
+            gap: .5em;
         }
         .cartas-ambito .carta{
-            background-color: black;
+            background-color: $color-negro;
+            transition: all 0.5s ease;
+
+            &:hover{
+                opacity: .5;
+            }
         }
         
         .carta img{
@@ -254,11 +269,16 @@ img{
         }
         
         .carta h5{
-            color: #ffffffb9;
+            @extend .ambitos-tit;
+            font-weight: 200;
+            margin-bottom: 0;
         }
         
         .ambitos p{
+            margin-top: .5em;
+            font-size: .9em;
             font-weight: 100;
+            text-align: justify;
         }
     }
 
@@ -269,31 +289,29 @@ img{
         margin-right: auto;
         
         h1{
-            margin-bottom: 3%;
-            text-shadow: 4px 4px 17px rgba(213,5,220,1);
+            @include titulos (0,3%,$sombra-titulo);
         }
         
         .proyecto{
             margin-left: 10%;
             max-width: 85%;
-            background-color: #101010;
+            background-color: $color-negro;
             opacity: 0.8;
         }
     
         .tit-proy{
-            color: #ffffff;
+            color: $color-blanco;
         }
     
         .texto-proy{
-            color: #ffffffd3;
+            color: $color-blanco-carta;
             font-weight: 100;
         }
     }
 
     #contacto{
         h1{
-            margin-bottom: 3%;
-            text-shadow: 4px 4px 17px rgba(213,5,220,1);
+            @include titulos (0,3%,$sombra-titulo);
         }
 
         #formulario{
@@ -308,15 +326,15 @@ img{
                 margin-top: 2%;
                 margin-left: auto;
                 margin-right: auto;
-                background-color: #101010;
-                box-shadow: 10px 10px 10px -2px rgba(213,5,220,0.28);
+                background-color: $color-negro;
+                box-shadow: $sombra-caja;
                 opacity: 0.8;
                 padding: .7em;
             }
 
             label{
                 font-size: 1.1em;
-                color: #ffffff;
+                color: $color-blanco;
                 margin-right: 1em;
             }
 

@@ -19,9 +19,12 @@ FUENTES
   font-style: normal;
 }
 */
+body{
+    font-family: "Raleway", sans-serif;
+}
 
 h1, h2, h3, h4, h5{
-    color: #ffffff;
+    color: $color-blanco;
     font-family: "Poppins", sans-serif;    
     text-align: center;
 }
@@ -34,7 +37,7 @@ h1{
 }
 
 h1 span{
-    color: #d505dc;
+    color: $color-violeta;
     font-weight: 800;
 }
 
@@ -44,17 +47,33 @@ h2{
     letter-spacing: 0.1em;
 }
 
+h3{
+    font-size: 1.9em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+}
+
 p{
-    color: #ffffff;
-    font: 1.7em;
+    font-family:  "Raleway", sans-serif;
+    color:$color-blanco;
+    font: 2em;
     font-weight: 200;
 }
 
 p spam{
-    color:#04DB09;
+    color:$color-spam;
     font-style: oblique;
     font-weight: 400;
 }
+
+
+/*Mixin*/
+@mixin titulos($m-top,$m-bottom,$sombra){
+    margin-top: $m-top;
+    margin-bottom: $m-bottom;
+    text-shadow: $sombra;
+}
+
 
 /*Media Query*/
 @media screen and (max-width: 1200px){
@@ -67,7 +86,7 @@ p spam{
     }
 
     p{
-        font-size: .9em;
+        font-size: 1.1em;
     }
 }
 
@@ -80,7 +99,12 @@ p spam{
     h2{
         font-size: 1.5em;
     }
+
+    h5{
+        font-size: 1.2em;
+    }
+
     p{
-        font-size: .8em;
+        font-size: 1em;
     }
 }

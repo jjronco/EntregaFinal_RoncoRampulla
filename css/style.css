@@ -1,4 +1,101 @@
-/*Base*/
+/**Colores**/
+/**Sombra**/
+/*
+FUENTES
+.raleway {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.monoton-regular {
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 200;
+  font-style: normal;
+  letter-spacing: 0.29em;
+}
+
+h1 span {
+  color: #d505dc;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 100;
+  letter-spacing: 0.1em;
+}
+
+h3 {
+  font-size: 1.9em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+  font: 2em;
+  font-weight: 200;
+}
+
+p spam {
+  color: #04DB09;
+  font-style: oblique;
+  font-weight: 400;
+}
+
+/*Mixin*/
+/*Media Query*/
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
+  p {
+    font-size: 1.1em;
+  }
+}
+@media screen and (max-width: 991px) {
+  h1 {
+    margin-top: 1.2em;
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  h5 {
+    font-size: 1.2em;
+  }
+  p {
+    font-size: 1em;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +108,6 @@ html, body {
 }
 
 body {
-  font-family: "Raleway", sans-serif;
   background-color: #101010;
   position: relative;
   min-height: 100vh;
@@ -62,6 +158,10 @@ img {
 .contenedor header .nav-boton {
   background-color: #ffffff;
   margin-right: 30px;
+  transition: all 0.3s;
+}
+.contenedor header .nav-boton:active {
+  transform: rotate3d(1, 1, 1, 30deg);
 }
 .contenedor header .nav-abierto {
   margin-right: 30px;
@@ -76,7 +176,7 @@ img {
   justify-content: flex-end;
 }
 .contenedor header nav ul a {
-  background-color: white;
+  background-color: #ffffff;
   text-decoration: none;
   color: #101010;
   padding: 0.25em 0.5em;
@@ -86,11 +186,11 @@ img {
 }
 .contenedor header nav ul a:hover {
   background-color: #d505dc;
-  transition: all 0.5s;
+  transition: all 0.5s ease;
 }
-.contenedor header .actual {
+.contenedor header nav ul .actual {
   background-color: #d505dc;
-  color: white;
+  color: #ffffff;
 }
 .contenedor .index-contenedor {
   margin-top: 14em;
@@ -113,11 +213,9 @@ img {
   width: 30px;
 }
 .contenedor #bio h1 {
-  display: flex;
-  justify-content: center;
   margin-top: 2%;
   margin-bottom: 2%;
-  text-shadow: 4px 4px 17px rgb(213, 5, 220);
+  text-shadow: rgb(213, 5, 220) 4px 4px 17px;
 }
 .contenedor #bio section {
   display: flex;
@@ -125,10 +223,15 @@ img {
   text-align: center;
   background-color: #101010;
   opacity: 0.8;
-  box-shadow: 10px 10px 10px -2px rgba(213, 5, 220, 0.28);
   padding: 0.7em;
   margin-left: 20%;
   margin-right: 20%;
+  margin-bottom: 2em;
+  gap: 1.5em;
+  transition: all 0.5s ease;
+}
+.contenedor #bio .section-bio:hover {
+  box-shadow: rgba(85, 85, 85, 0.28) 10px 10px 10px -2px;
 }
 .contenedor #bio .texto-bio {
   display: flex;
@@ -175,8 +278,9 @@ img {
   max-width: 80%;
 }
 .contenedor #servicios h1 {
+  margin-top: 0;
   margin-bottom: 3%;
-  text-shadow: 4px 4px 17px rgb(213, 5, 220);
+  text-shadow: rgb(213, 5, 220) 4px 4px 17px;
 }
 .contenedor #servicios #servicio_pcipal {
   display: flex;
@@ -184,7 +288,7 @@ img {
   justify-content: center;
   text-align: center;
   background-color: #101010;
-  box-shadow: 10px 10px 10px -2px rgba(213, 5, 220, 0.28);
+  box-shadow: rgba(85, 85, 85, 0.28) 10px 10px 10px -2px;
   opacity: 0.8;
   padding: 0.7em 0 1.5em 0;
 }
@@ -207,15 +311,24 @@ img {
   justify-content: center;
   margin: 5%;
 }
-.contenedor #servicios .ambitos h1 {
+.contenedor #servicios .ambitos-tit, .contenedor #servicios .carta h5 {
   text-align: center;
   margin: 2% 0 2% 0;
+  color: #5c975d;
+  background-color: #101010;
+  margin-bottom: 2%;
+  opacity: 0.9;
 }
 .contenedor #servicios .cartas-ambito {
-  margin-top: 5%;
+  margin-top: 2.5%;
+  gap: 0.5em;
 }
 .contenedor #servicios .cartas-ambito .carta {
-  background-color: black;
+  background-color: #101010;
+  transition: all 0.5s ease;
+}
+.contenedor #servicios .cartas-ambito .carta:hover {
+  opacity: 0.5;
 }
 .contenedor #servicios .carta img {
   text-align: center;
@@ -223,10 +336,14 @@ img {
   margin-left: 5%;
 }
 .contenedor #servicios .carta h5 {
-  color: rgba(255, 255, 255, 0.7254901961);
+  font-weight: 200;
+  margin-bottom: 0;
 }
 .contenedor #servicios .ambitos p {
+  margin-top: 0.5em;
+  font-size: 0.9em;
   font-weight: 100;
+  text-align: justify;
 }
 .contenedor #portfolio {
   width: 90%;
@@ -235,8 +352,9 @@ img {
   margin-right: auto;
 }
 .contenedor #portfolio h1 {
+  margin-top: 0;
   margin-bottom: 3%;
-  text-shadow: 4px 4px 17px rgb(213, 5, 220);
+  text-shadow: rgb(213, 5, 220) 4px 4px 17px;
 }
 .contenedor #portfolio .proyecto {
   margin-left: 10%;
@@ -248,12 +366,13 @@ img {
   color: #ffffff;
 }
 .contenedor #portfolio .texto-proy {
-  color: rgba(255, 255, 255, 0.8274509804);
+  color: rgba(255, 255, 255, 0.7254901961);
   font-weight: 100;
 }
 .contenedor #contacto h1 {
+  margin-top: 0;
   margin-bottom: 3%;
-  text-shadow: 4px 4px 17px rgb(213, 5, 220);
+  text-shadow: rgb(213, 5, 220) 4px 4px 17px;
 }
 .contenedor #contacto #formulario {
   display: flex;
@@ -268,7 +387,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   background-color: #101010;
-  box-shadow: 10px 10px 10px -2px rgba(213, 5, 220, 0.28);
+  box-shadow: rgba(85, 85, 85, 0.28) 10px 10px 10px -2px;
   opacity: 0.8;
   padding: 0.7em;
 }
@@ -305,87 +424,6 @@ img {
   }
   #servicios #servicio_pcipal {
     margin-bottom: 3em;
-  }
-}
-/*
-FUENTES
-.raleway {
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
-}
-
-.poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.monoton-regular {
-  font-family: "Monoton", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-*/
-h1, h2, h3, h4, h5 {
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  text-align: center;
-}
-
-h1 {
-  font-size: 3em;
-  font-weight: 200;
-  font-style: normal;
-  letter-spacing: 0.29em;
-}
-
-h1 span {
-  color: #d505dc;
-  font-weight: 800;
-}
-
-h2 {
-  font-size: 2em;
-  font-weight: 100;
-  letter-spacing: 0.1em;
-}
-
-p {
-  color: #ffffff;
-  font: 1.7em;
-  font-weight: 200;
-}
-
-p spam {
-  color: #04DB09;
-  font-style: oblique;
-  font-weight: 400;
-}
-
-/*Media Query*/
-@media screen and (max-width: 1200px) {
-  h1 {
-    font-size: 2.5em;
-  }
-  h2 {
-    font-size: 1.8em;
-  }
-  p {
-    font-size: 0.9em;
-  }
-}
-@media screen and (max-width: 991px) {
-  h1 {
-    margin-top: 1.2em;
-    font-size: 2em;
-  }
-  h2 {
-    font-size: 1.5em;
-  }
-  p {
-    font-size: 0.8em;
   }
 }
 
